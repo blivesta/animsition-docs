@@ -1,0 +1,34 @@
+{% include head.html %}
+<body class="{{ page.class }} animsition-overlay-wrapper">
+
+	{% include header.html %}
+
+	<div class="animsition-overlay" data-animsition-in="{{ page.inAnimateClass }}" data-animsition-out="{{ page.outAnimateClass }}" data-animsition-overlay="true">
+
+		<main role="main">
+
+      <section class="docs-masthead">
+        <div class="Container Container--slim">
+  				<h1 class="t-mt-00">{{ page.title }}</h1>
+  				<h2>{{ site.discription }}</h2>
+
+          <div class="docs-carbon t-clear">
+            {% include carbon.html %}
+          </div>
+        </div>
+      </section>
+
+      <div class="Container Container--slim">
+
+		    {{ content }}
+
+		  </div><!-- /.container -->
+
+		</main>
+
+
+    {% include footer.html %}
+
+  </div><!-- /.animsition-overlay -->
+</body>
+</html>

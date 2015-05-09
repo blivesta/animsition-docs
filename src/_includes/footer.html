@@ -1,0 +1,73 @@
+<footer class="docs-footer">
+  <div class="Container Container--slim">
+
+    <h2 class="docs-subtitle">{{ site.title }}</h2>
+    <ul class="ListInline t-mb-xs">
+      <li><img src="http://img.shields.io/travis/blivesta/{{ site.repo }}.svg" alt="travis" /></li>
+      <li>·</li>
+      <li><img src="http://img.shields.io/bower/v/{{ site.repo }}.svg" alt="bower" /></li>
+    </ul>
+    {% if page.layout == 'home' %}
+      {% include social-buttons.html %}
+    {% endif %}
+
+    <ul class="ListInline t-mb-xs">
+      <li>Code licensed under the MIT.</li>
+    </ul>
+
+    <ul class="ListInline">
+      <li><span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;Other Projects</li>
+      <li><a href="http://sircus.blivesta.com">Sircus</a></li>
+      <li><a href="/drawer">Drawer</a></li>
+      <li><a href="/chaffle">Chaffle</a></li>
+      <li><a href="/conv">Conv</a></li>
+      <li><a href="http://blivesta.com/" target="_blank">and more...</a></li>
+    </ul>
+
+  </div>
+</footer>
+
+<!-- Google analytics -->
+<script src="http://git.blivesta.com/js/ga.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- animsition js -->
+<script src="{{ page.base_url }}animsition/animsition.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  {% if page.layout == 'overlay' %}
+
+  $(".animsition-overlay").animsition({
+    overlay: true
+  }).one('animsition.start',function(){
+    $('.animsition-overlay-wrapper').addClass('animsition-overlay-wrapper--start');
+  }).one('animsition.end',function(){
+  });
+
+
+  {% else if page.layout == 'home' %}
+
+  $(".animsition").animsition().one('animsition.start',function(){
+  }).one('animsition.end',function(){
+    $(this).find('.animsition-child').addClass('fade-in-down-sm').css({
+      "opacity":1
+    });
+  })
+
+  {% else %}
+  $(".animsition")
+    .animsition()
+    .one('animsition.start',function(){
+      console.log('animsition.start');
+    }).one('animsition.end',function(){
+      console.log('animsition.end');
+    })
+
+  {% endif %}
+
+});
+
+</script>
