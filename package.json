@@ -9,6 +9,6 @@
     "gulptasks":"^0.10.0",
     "run-sequence": "^1.0.2",
     "sircus":"0.5.1",
-    "animsition":"3.5.1"
+    "animsition":"3.5.2"
   }
 }
