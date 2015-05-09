@@ -50,20 +50,16 @@
 
 <script>
 $(document).ready(function () {
-  $(".animsition").each(function(index){
-    $(this).animsition()
-      .one('animsition.start',function(){
-        $(this).find('.animsition-state').text('Animsition Sart');
-        console.log('START' + index);
-      })
-      .one('animsition.end',function(){
-        $(this).addClass('animsition--end');
-        $(this).find('.animsition-state').text('').text('Animsition End');
-        $(this).find('.animsition-child--first').addClass('fade-in-right-sm');
-        $(this).find('.animsition-child--second').addClass('fade-in-left-sm');
-        console.log('END' + index);
-      });
-    });
+  $(".animsition").animsition()
+    .one('animsition.start',function(){
+      $(this).find('.animsition-state').text('Animsition Sart');
+    })
+    .one('animsition.end',function(){
+      $(this).addClass('animsition--end');
+      $(this).find('.animsition-state').text('').text('Animsition End');
+      $(this).find('.animsition-child--first').addClass('fade-in-right-sm');
+      $(this).find('.animsition-child--second').addClass('fade-in-left-sm');
+  });
 });
 </script>
 
