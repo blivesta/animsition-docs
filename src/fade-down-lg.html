@@ -5,18 +5,17 @@ inAnimateClass : fade-in-down-lg
 outAnimateClass : fade-out-down-lg
 base_url: "../"
 ---
-<div class="docs-Container Container Container--slim">
+<section class="docs-Container Container Container--slim">
   <h2 class="docs-title">Demo</h2>
-  <p class="lead"></p>
-  <div class="section-body">
-    {% include demo-links.html %}
-  </div>
-</div>
+  {% include demo-links.html %}
+</section>
 
-<div class="docs-Container Container Container--slim">
+<section class="docs-Container Container Container--slim">
+  <h2 class="docs-title">Sandbox</h2>
+  {% include sandbox-link.html %}
+</section>
+
+<section class="docs-Container Container Container--slim">
   <h2 class="docs-title">Installation</h2>
-  <p class="lead"></p>
-  <div class="section-body">
-    {% include demo-setup.html %}
-  </div>
-</div>
+  {% include setup.html %}
+</section>

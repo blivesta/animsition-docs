@@ -156,12 +156,7 @@ base_url: "./"
   <section class="docs-Container Container Container--slim t-alignCenter">
     <h2 class="docs-title">Sandbox</h2>
     <p class="icon-mark"><span class="oi oi-beaker"></span></p>
-    <ul class="ListInline">
-      <li><a href="{{ page.base_url }}sandbox/callback1.html" class="Button Button--pill Button--border is-notice">Callback1</a></li>
-      <li><a href="{{ page.base_url }}sandbox/callback2.html" class="Button Button--pill Button--border is-notice">Callback2</a></li>
-      <li><a href="{{ page.base_url }}sandbox/overlay1.html" class="Button Button--pill Button--border is-success">Overlay1</a></li>
-      <li><a href="{{ page.base_url }}sandbox/overlay2.html" class="Button Button--pill Button--border is-success">Overlay2</a></li>
-    </ul>
+    {% include sandbox-link.html %}
   </section>
 
 
@@ -183,14 +178,14 @@ base_url: "./"
     <h2 class="docs-title">Installation</h2>
     <p class="icon-mark"><span class="oi oi-code"></span></p>
     <p><a href="{{ site.repo_url }}" class="Button is-notice">Download on GitHub</a></p>
-    {% include demo-setup.html %}
+    {% include setup.html %}
   </section>
 
 
   <section class="docs-Container Container Container--slim t-alignCenter">
     <h2 class="docs-title">Events</h2>
     <p class="icon-mark"><span class="oi oi-bolt"></span></p>
-    {% include demo-event.html %}
+    {% include event.html %}
   </section>
 
 </main>
