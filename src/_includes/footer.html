@@ -2,10 +2,7 @@
   <div class="Container Container--slim">
 
     <h2 class="docs-subtitle">{{ site.title }}</h2>
-    <ul class="ListInline t-mb-xs">
-      <li><img src="http://img.shields.io/travis/blivesta/{{ site.repo }}.svg" alt="travis" /></li>
-      <li><img src="http://img.shields.io/bower/v/{{ site.repo }}.svg" alt="bower" /></li>
-    </ul>
+
     {% if page.layout == 'home' %}
       {% include social-buttons.html %}
     {% endif %}
