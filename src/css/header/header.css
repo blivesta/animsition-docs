@@ -1,0 +1,89 @@
+:root {
+  --docs-masthead-color: #fff;
+  --docs-masthead-bgcolor: #242d35;
+}
+
+.docs-header {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+  .docs-header .Container {
+    height: 5rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
+  }
+
+.docs-brand {
+  text-decoration: none;
+  color: #fff;
+  line-height: 50px;
+}
+  .docs-brand:hover {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+.docs-masthead {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  background-color: var(--docs-masthead-bgcolor);
+  background-image: linear-gradient(45deg, #242d35 0%, #85a1bb 100%);
+  color: var(--docs-masthead-color);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+  .docs-masthead .Container  {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .docs-masthead h1 {
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: var(--g-fontSize-gt);
+    color: inherit;
+  }
+  .docs-masthead h2 {
+    margin: 0 auto 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: inherit;
+  }
+  .docs-masthead a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+.docs-home .docs-masthead {
+  padding-bottom: 80px;
+}
+  .docs-home .docs-masthead h1 {
+    margin-top: 40px;
+    font-size: calc(var(--g-fontSize-gt) + 1);
+  }
+
+.docs-carbon {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 15px;
+  z-index: 99;
+  max-width: 340px;
+  text-align: left !important;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+  .carbon-wrap .carbon-img {
+    float: left;
+    width: 145px;
+  }
+    .carbon-wrap .carbon-img img {
+      margin-right: 15px;
+    }
+
+  .carbon-poweredby {
+    margin-top: 10px;
+    display: block;
+  }

@@ -1,0 +1,54 @@
+.sandbox .section{
+    background-color:#0074D9;
+    height:10rem;
+  }
+.sandbox .animsition-child {
+  background-color:#F012BE;
+  position: relative;
+  opacity: 0;
+  -webkit-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+}
+
+.sandbox .animsition--end {
+  background-color:#FFDC00
+}
+
+.sandbox .animsition-overlay-wrapper {
+  background-color:#000;
+}
+.sandbox .animsition-overlay-wrapper--start {
+  background-color:#eee;
+}
+.sandbox .animsition-overlay-slide {
+  background-color:#000;
+}
+
+.sandbox-carbon {
+  position:fixed;
+  right:0;
+  bottom:0;
+  box-sizing:border-box;
+  float: right;
+  background-color: rgba(0,0,0,.05);
+  padding: 1rem;
+  width: 160px;
+  text-align: left !important;
+  font-size:.8rem;
+  margin:0;
+}
+.sandbox-carbon .carbon-img {
+  float:left;
+}
+.sandbox-carbon .carbon-img img {
+  margin-bottom:1.5rem;
+}
+
+.sandbox-carbon .carbon-poweredby{
+  margin-top:1rem;
+  display:block;
+}

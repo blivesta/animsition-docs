@@ -1,0 +1,139 @@
+<h3 class="docs-subtitle">Step 1: Link required files</h3>
+
+{{#markdown}}
+``` html
+<!-- animsition CSS -->
+<link rel="stylesheet" href="{{file.meta.base_url}}dist/css/animsition.min.css">
+
+<!-- vendor js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- animsition js -->
+<script src="{{file.meta.base_url}}dist/js/jquery.animsition.min.js"></script>
+```
+{{/markdown}}
+
+<h3 class="docs-subtitle">Step 2: HTML markup</h3>
+{{#markdown}}
+``` html
+<body>
+{{#is file.meat.layout "overlay"}}
+<div class="animsition-overlay" data-animsition-overlay="true">
+{{else}}
+  <div class="animsition">
+{{/is}}
+
+    <a href="./page1" class="animsition-link">animsition link 1</a>
+    <a href="./page2" class="animsition-link">animsition link 2</a>
+    
+  </div>
+</body>
+```
+{{/markdown}}
+
+<h4 class="t-mt-lg">If you want each "linkElement" to use a different animation. </h4>
+{{#markdown}}
+``` html
+{{#is file.meta.layout "overlay"}}
+<a
+  href="./page1"
+  class="animsition-link"
+  data-animsition-out="overlay-slide-out-top"
+  data-animsition-out-duration="2000"
+>
+  animsition link 1
+</a>
+
+<a
+  href="./page2"
+  class="animsition-link"
+  data-animsition-out="overlay-slide-out-right"
+  data-animsition-out-duration="500"
+>
+  animsition link 2
+</a>
+{{else}}
+<a
+  href="./page1"
+  class="animsition-link"
+  data-animsition-out="fade-out-right"
+  data-animsition-out-duration="2000"
+>
+  animsition link 1
+</a>
+
+<a
+  href="./page2"
+  class="animsition-link"
+  data-animsition-out="rotate-out"
+  data-animsition-out-duration="500"
+>
+  animsition link 2
+</a>
+{{/is}}
+```
+{{/markdown}}
+
+<h4 class="t-mt-lg">If you want to each page to use a different animation.</h4>
+{{#markdown}}
+``` html
+{{#is file.meta.layout "overlay"}}
+<div
+  class="animsition-overlay"
+  data-animsition-overlay="true"
+  data-animsition-in="{{file.meta.inAnimateClass}}"
+  data-animsition-in-duration="1000"
+  data-animsition-out="{{file.meta.outAnimateClass}}"
+  data-animsition-out-duration="800"
+>
+  ...
+</div>
+{{else}}
+<div
+  class="animsition"
+  data-animsition-in="{{file.meta.inAnimateClass}}"
+  data-animsition-in-duration="1000"
+  data-animsition-out="{{file.meta.outAnimateClass}}"
+  data-animsition-out-duration="800"
+>
+  ...
+</div>
+{{/is}}
+```
+{{/markdown}}
+
+<h3 class="docs-subtitle">Step 3: Call the animsition</h3>
+{{#markdown}}
+``` javascript
+$(document).ready(function() {
+  {{#is file.meta.layout "overlay"}}
+  $(".animsition-overlay").animsition({
+  {{else}}
+  $(".animsition").animsition({
+  {{/is}}
+    inClass               :   '{{file.meta.inAnimateClass}}',
+    outClass              :   '{{file.meta.outAnimateClass}}',
+    inDuration            :    1500,
+    outDuration           :    800,
+    linkElement           :   '.animsition-link',
+    // e.g. linkElement   :   'a:not([target="_blank"]):not([href^=#])'
+    loading               :    true,
+    loadingParentElement  :   'body', //animsition wrapper element
+    loadingClass          :   'animsition-loading',
+    unSupportCss          : [ 'animation-duration',
+                              '-webkit-animation-duration',
+                              '-o-animation-duration'
+                            ],
+    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    {{#is file.meta.layout "overlay"}}
+    overlay               :   true,
+    {{else}}
+    overlay               :   false,
+    {{/is}}
+    overlayClass          :   'animsition-overlay-slide',
+    overlayParentElement  :   'body'
+  });
+});
+```
+{{/markdown}}

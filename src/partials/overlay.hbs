@@ -1,0 +1,52 @@
+{{> include/head}}
+<body class="{{file.meta.class}} animsition-overlay-wrapper" itemscope itemtype="http://schema.org/WebPage">
+
+	{{> include/header}}
+
+	<div class="animsition-overlay" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}" data-animsition-overlay="true">
+
+	<main role="main">
+
+  	<section class="docs-masthead">
+      <div class="Container Container--slim">
+  			<h1 itemprop="name">{{file.meta.title}}</h1>
+				<h2>{{site.description}}</h2>
+				<p class="t-none" itemprop="description">{{file.meta.description}}</p>
+				<p class="t-none">Author :&nbsp;
+	         <span class="icon-blivesta icon-sm"></span>&nbsp;
+	         <a href="http://blivesta.com/" target="_blank" itemprop="author">blivesta</a>
+	       </p>
+
+        <div class="docs-carbon t-clear">
+        {{> include/carbon}}
+        </div>
+      </div>
+    </section>
+
+		<div class="Container Container--slim">
+			{{#block "overlay-main"}}
+			<section class="docs-Container Container Container--slim">
+				<h2 class="docs-title">Overlay Demo</h2>
+				{{> include/demo-links}}
+			</section>
+
+			<section class="docs-Container Container Container--slim">
+				<h2 class="docs-title">Sandbox</h2>
+				{{> include/sandbox-link}}
+			</section>
+
+			<section class="docs-Container Container Container--slim">
+				<h2 class="docs-title">Installation</h2>
+{{> include/setup}}
+			</section>
+			{{/block}}
+		</div><!-- /.container -->
+
+	</main>
+
+  {{> include/footer}}
+
+  </div><!-- /.animsition-overlay -->
+
+</body>
+</html>

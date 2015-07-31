@@ -1,0 +1,25 @@
+---
+layout: sandbox
+title: Callback1
+base_url: "../../"
+---
+{{#extend "sandbox"}}
+{{#content "content"}}
+<section class="animsition" data-animsition-in="fade-in-down-sm" data-animsition-out="fade-out-up-sm">
+  <h1>section.animsition</h1>
+
+  <h2 class="animsition-state"></h2>
+  <div class="animsition-child animsition-child--first">
+    <h3>div.animsition-child</h3>
+  </div>
+</section>
+<section class="animsition" data-animsition-in="fade-in-up-sm" data-animsition-out="fade-out-down-sm">
+  <h1>section.animsition</h1>
+
+  <h2 class="animsition-state"></h2>
+  <div class="animsition-child animsition-child--second">
+    <h3>div.animsition-child</h3>
+  </div>
+</section>
+{{/content}}
+{{/extend}}

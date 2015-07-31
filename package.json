@@ -1,14 +1,39 @@
 {
   "name": "animsition-docs",
-  "author": "blivesta",
   "description": "Animsition website.",
-  "url": "http://git.blivesta.com/animsition",
+  "author": "Yasuyuki Enomoto <enmt@blivesta.com> (http://blivesta.com/)",
+  "homepage": "http://git.blivesta.com/animsition",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blivesta/animsiton-docs.git"
+  },
   "devDependencies": {
-    "browser-sync":"^2.7.1",
-    "gulp": "^3.8.10",
-    "gulptasks":"^0.10.0",
-    "run-sequence": "^1.0.2",
-    "sircus":"0.5.1",
-    "animsition":"3.5.2"
+    "animsition":"^3.5.2",
+    "browser-sync": "^2.8.0",
+    "browserify":"^11.0.0",
+    "del": "^1.2.0",
+    "gulp-cssnext": "^1.0.1",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-hb": "^2.6.1",
+    "gulp-gh-pages":"^0.5.2",
+    "gulp-header": "^1.2.2",
+    "gulp-htmlhint":"^0.3.0",
+    "gulp-htmlmin": "^1.1.3",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sitemap":"^2.1.1",
+    "gulp-uglify": "^1.2.0",
+    "gulp": "^3.9.0",
+    "handlebars-layouts": "^3.1.0",
+    "helper-markdown": "^0.1.1",
+    "htmlhint-stylish": "^1.0.3",
+    "jquery":"*",
+    "js-yaml": "^3.3.1",
+    "jshint-stylish": "^2.0.1",
+    "psi": "^1.0.6",
+    "run-sequence": "^1.1.2",
+    "sircus": "^1.0.0-alpha.1",
+    "vinyl-source-stream":"1.1.0"
   }
 }

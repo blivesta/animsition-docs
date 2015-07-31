@@ -1,0 +1,64 @@
+<footer class="docs-footer" role="contentinfo">
+  <div class="docs-Container Container Container--slim">
+
+    <h2 class="docs-subtitle">{{site.title}}</h2>
+    {{#is file.meta.layout "home"}}
+      {{> include/social-buttons}}
+    {{/is}}
+
+    <ul class="ListInline t-mbXs">
+      <li itemprop="license">Code licensed under the MIT.</li>
+    </ul>
+
+    <ul class="ListInline">
+      <li><span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;Other Projects</li>
+      <li><a href="http://sircus.blivesta.com">Sircus</a></li>
+      <li><a href="/drawer">Drawer</a></li>
+      <li><a href="/chaffle">Chaffle</a></li>
+      <li><a href="/conv">Conv</a></li>
+      <li><a href="http://blivesta.com/" target="_blank">and more...</a></li>
+    </ul>
+
+  </div>
+</footer>
+
+<!-- Google analytics -->
+<script src="http://git.blivesta.com/js/ga.js"></script>
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.5.2/js/jquery.animsition.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  {{#is file.meta.layout "overlay"}}
+  $(".animsition-overlay").animsition({
+    overlay: true
+  }).one('animsition.start',function(){
+    $('.animsition-overlay-wrapper').addClass('animsition-overlay-wrapper--start');
+  }).one('animsition.end',function(){
+  });
+  {{/is}}
+
+  {{#is file.meta.layout "home"}}
+  $(".animsition").animsition().one('animsition.start',function(){
+  }).one('animsition.end',function(){
+    $(this).find('.animsition-child').addClass('zoom-in').css({
+      "opacity":1
+    });
+  })
+  {{/is}}
+
+  {{#is file.meta.layout "base"}}
+  $(".animsition")
+    .animsition()
+    .one('animsition.start',function(){
+      console.log('animsition.start');
+    }).one('animsition.end',function(){
+      console.log('animsition.end');
+    })
+  {{/is}}
+
+});
+</script>
