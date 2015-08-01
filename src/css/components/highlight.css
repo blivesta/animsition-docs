@@ -17,7 +17,7 @@ pre {
   white-space: nowrap;
   word-wrap: break-word;
 }
-pre code[class*="language-"] {
+pre code[class*="lang-"] {
   white-space: pre;
 }
 
