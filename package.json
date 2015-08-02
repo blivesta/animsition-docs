@@ -33,7 +33,7 @@
     "jshint-stylish": "^2.0.1",
     "psi": "^1.0.6",
     "run-sequence": "^1.1.2",
-    "sircus": "^1.0.0-alpha.1",
+    "sircus": "^1.0.0-alpha.2",
     "vinyl-source-stream":"1.1.0"
   }
 }
