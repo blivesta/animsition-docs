@@ -1,8 +1,3 @@
-:root {
-  --docs-masthead-color: #fff;
-  --docs-masthead-bgcolor: #242d35;
-}
-
 .docs-header {
   background-color: transparent;
   position: absolute;
@@ -87,3 +82,18 @@
     margin-top: 10px;
     display: block;
   }
+
+.animsition-child {
+  position: relative;
+  opacity: 0;
+  animation-fill-mode: both;
+  animation-duration: .8s;
+}
+
+.animsition-overlay-wrapper {
+  background-color: #ddd;
+}
+
+.animsition-overlay-wrapper--start {
+  background-color: #fff;
+}
