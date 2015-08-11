@@ -1,49 +1,30 @@
 {{> include/head}}
 <body class="{{file.meta.class}}" itemscope itemtype="http://schema.org/WebPage">
-  <div class="animsition" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}">
+<div class="animsition" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}">
 
-    {{> include/header}}
+{{> include/header}}
 
-	<main role="main">
+<main role="main">
+  {{#block "main"}}
+  <section class="docs-Main Container Container--slim t-gutter">
+    <h2 class="docs-title">Demo</h2>
+    {{> include/demo-links}}
+  </section>
 
-    <section class="docs-masthead">
-      <div class="Container Container--slim">
-				<h1 itemprop="name">{{file.meta.title}}</h1>
-        <h2>{{site.description}}</h2>
-				<p class="t-none" itemprop="description">{{file.meta.description}}</p>
-        <p class="t-none">Author :&nbsp;
-          <span class="icon-blivesta icon-sm"></span>&nbsp;
-          <a href="http://blivesta.com/" target="_blank" itemprop="author">blivesta</a>
-        </p>
+  <section class="docs-Main Container Container--slim t-gutter">
+    <h2 class="docs-title">Sandbox</h2>
+    {{> include/sandbox-link}}
+  </section>
 
-
-        <div class="docs-carbon t-clear">
-        {{> include/carbon}}
-        </div>
-      </div>
-    </section>
-
-    {{#block "main"}}
-    <section class="docs-Container Container Container--slim ">
-      <h2 class="docs-title">Demo</h2>
-      {{> include/demo-links}}
-    </section>
-
-    <section class="docs-Container Container Container--slim">
-      <h2 class="docs-title">Sandbox</h2>
-      {{> include/sandbox-link}}
-    </section>
-
-    <section class="docs-Container Container Container--slim">
-      <h2 class="docs-title">Installation</h2>
+  <section class="docs-Main Container Container--slim t-gutter">
+    <h2 class="docs-title">Installation</h2>
 {{> include/setup}}
-    </section>
-    {{/block}}
+  </section>
+  {{/block}}
+</main>
 
-	</main>
+{{> include/footer}}
 
-  {{> include/footer}}
-
-  </div><!-- /.animsition -->
+</div><!-- /.animsition -->
 </body>
 </html>

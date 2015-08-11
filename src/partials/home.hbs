@@ -1,8 +1,15 @@
 {{> include/head}}
-<body class="docs-home" itemscope itemtype="http://schema.org/WebPage">
+<body class="docs-Home" itemscope itemtype="http://schema.org/WebPage">
+<div class="animsition" data-animsition-in-duration="600">
 
+{{> include/header}}
+
+<main role="main">
 {{{block "content"}}}
+</main>
 
 {{> include/footer}}
+
+</div><!-- /.animsition -->
 </body>
 </html>
