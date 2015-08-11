@@ -9,14 +9,13 @@
 @import "./sandbox.css";
 
 :root {
-/* Docs ------------------------------------------- */
   --docs-color: #556b7f;
   --docs-labels-bgcolor: #cbd5df;
   --docs-masthead-color: #fff;
   --docs-masthead-bgcolor: #242d35;
+  --docs-masthead-gradient: #85a1bb;
   --docs-footer-bgcolor: #ebeef2;
 
-/* Button ------------------------------------------- */
   --Button-transition: all 200ms ease-out;
   --Button--pill: 5rem;
 

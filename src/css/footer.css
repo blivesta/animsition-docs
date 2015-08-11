@@ -1,14 +1,14 @@
-.docs-footer {
+.docs-Footer {
   padding-top: 40px;
   padding-bottom: 60px;
   background-color: var(--docs-footer-bgcolor);
 }
-  .docs-footer li a:link {
-    font-size: 13px;
-    color: #6c7b88;
-    text-decoration: underline;
-  }
-  .docs-footer li a:matches(:hover,:focus,:active ) {
-    color: #4a545d;
-    text-decoration: none;
-  }
+.docs-Footer a:link {
+  font-size: 13px;
+  text-decoration: underline;
+  color: #6c7b88;
+}
+.docs-Footer a:matches(:hover,:focus,:active ) {
+  text-decoration: none;
+  color: #4a545d;
+}
