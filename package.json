@@ -13,7 +13,7 @@
     "build": "gulp build"
   },
   "devDependencies": {
-    "animsition": "^3.5.2",
+    "animsition": "^3.6.0",
     "browser-sync": "^2.8.0",
     "browserify": "^11.0.0",
     "del": "^1.2.0",
@@ -35,7 +35,7 @@
     "jshint-stylish": "^2.0.1",
     "psi": "^1.0.6",
     "run-sequence": "^1.1.2",
-    "sircus": "^1.0.0-alpha.2",
+    "sircus": "^1.0.0-alpha.3",
     "site-boilerplate-helpers": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }
