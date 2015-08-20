@@ -1,14 +1,10 @@
 .docs-Footer {
-  padding-top: 40px;
-  padding-bottom: 60px;
-  background-color: var(--docs-footer-bgcolor);
+  padding-top:var(--g-space-lg);
+  padding-bottom:var(--g-space-lg);
+  background-color: var(--docs-color-primary-lighter);
 }
-.docs-Footer a:link {
-  font-size: 13px;
-  text-decoration: underline;
-  color: #6c7b88;
-}
-.docs-Footer a:matches(:hover,:focus,:active ) {
-  text-decoration: none;
-  color: #4a545d;
+
+.docs-Footer li {
+  text-transform: uppercase;
+  font-size: var(--g-fontSize-sm);
 }

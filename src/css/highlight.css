@@ -1,13 +1,15 @@
 pre {
   display: block;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  font-family: menlo, monospace;
   padding: 14px;
+  font-size: 14px;
   text-align: left;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
   word-break: break-all;
   word-wrap: break-word;
+  margin-bottom:var(--g-space-xl);
 }
 pre code[class*="lang-"] {
   white-space: pre-wrap;

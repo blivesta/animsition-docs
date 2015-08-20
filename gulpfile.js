@@ -49,7 +49,7 @@ gulp.task('html', function() {
     }))
     .pipe(hb({
       bustCache: true,
-      debug: false,
+      debug: true,
       data: {
         pkg: pkg,
         site: yaml.safeLoad(fs.readFileSync('./site.yml', 'utf8'))

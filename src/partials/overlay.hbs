@@ -1,23 +1,21 @@
 {{> include/head}}
 <body class="{{file.meta.class}} animsition-overlay-wrapper" itemscope itemtype="http://schema.org/WebPage">
 
+<div class="js-animsition-overlay animsition-overlay" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}" data-animsition-overlay="true">
+
 {{> include/header}}
 
-<div class="animsition-overlay" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}" data-animsition-overlay="true">
-
 <main role="main">
+	{{> include/pagehead}}
+
 	{{#block "overlay-main"}}
-	<section class="docs-Main Container Container--slim t-gutter">
+
+	<section class="docs-Section Container Container--slim t-gutter">
 		<h2 class="docs-title">Overlay Demo</h2>
 		{{> include/demo-links}}
 	</section>
 
-	<section class="docs-Main Container Container--slim t-gutter">
-		<h2 class="docs-title">Sandbox</h2>
-		{{> include/sandbox-link}}
-	</section>
-
-	<section class="docs-Main Container Container--slim t-gutter">
+	<section class="docs-Section Container Container--slim t-gutter">
 		<h2 class="docs-title">Installation</h2>
 {{> include/setup}}
 		</section>

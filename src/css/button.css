@@ -1,9 +1,12 @@
 .Button {
   transition: var(--Button-transition);
 }
+
+
 .Button--pill {
   border-radius: var(--Button--pill);
 }
+
 
 /* --notice */
 .Button--notice {
@@ -11,20 +14,26 @@
   border-color: var(--Button-notice-borderColor);
   color: var(--Button-notice-color);
 }
+
+
 .Button--notice:matches(:hover,:focus,:active,.is-active) {
   background-color: var(--Button-notice-color);
   color: #fff;
   border-color: var(--Button-notice-borderColor);
 }
 
+
 .Button--fill.Button--notice {
-  background-color:var(--ButtonFill-notice-bgColor);
-  color:var(--ButtonFill-notice-color);
+  background-color: var(--ButtonFill-notice-bgColor);
+  color: var(--ButtonFill-notice-color);
 }
+
+
 .Button--fill.Button--notice:matches(:hover,:focus,:active,.is-active) {
-  background-color:transparent;
-  color:var(--ButtonFill-notice-bgColor);
+  background-color: transparent;
+  color: var(--ButtonFill-notice-bgColor);
 }
+
 
 /* --success */
 .Button--success {
@@ -32,38 +41,50 @@
   border-color: var(--Button-success-borderColor);
   color: var(--Button-success-color);
 }
+
+
 .Button--success:matches(:hover,:focus,:active,.is-active) {
   background-color: var(--Button-success-color);
   color: #fff;
   border-color: var(--Button-success-borderColor);
 }
 
+
 .Button--fill.Button--success {
-  background-color:var(--ButtonFill-success-bgColor);
-  color:var(--ButtonFill-success-color);
+  background-color: var(--ButtonFill-success-bgColor);
+  color: var(--ButtonFill-success-color);
 }
+
+
 .Button--fill.Button--success:matches(:hover,:focus,:active,.is-active) {
-  background-color:transparent;
-  color:var(--ButtonFill-success-bgColor);
+  background-color: transparent;
+  color: var(--ButtonFill-success-bgColor);
 }
 
 /* --error */
+
+
 .Button--error {
   background-color: var(--Button-error-fill);
   border-color: var(--Button-error-borderColor);
   color: var(--Button-error-color);
 }
+
+
 .Button--error:matches(:hover,:focus,:active,.is-active) {
   background-color: var(--Button-error-color);
   color: #fff;
   border-color: var(--Button-error-borderColor);
 }
 
+
 .Button--fill.Button--error {
-  background-color:var(--ButtonFill-error-bgColor);
-  color:var(--ButtonFill-error-color);
+  background-color: var(--ButtonFill-error-bgColor);
+  color: var(--ButtonFill-error-color);
 }
+
+
 .Button--fill.Button--error:matches(:hover,:focus,:active,.is-active) {
-  background-color:transparent;
-  color:var(--ButtonFill-error-bgColor);
+  background-color: transparent;
+  color: var(--ButtonFill-error-bgColor);
 }

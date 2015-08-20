@@ -1,0 +1,28 @@
+.docs-Carbon {
+  font-size: 12px;
+  z-index: 99;
+  max-width: 340px;
+  margin-bottom: 30px;
+  padding: 1rem;
+  text-align: left !important;
+  border-radius: 4px;
+  background: #fff;
+  background: rgba(255, 255, 255, .1);
+}
+
+
+.carbon-wrap .carbon-img {
+  float: left;
+  width: 145px;
+}
+
+
+.carbon-wrap .carbon-img img {
+  margin-right: 15px;
+}
+
+
+.carbon-poweredby {
+  display: block;
+  margin-top: 10px;
+}

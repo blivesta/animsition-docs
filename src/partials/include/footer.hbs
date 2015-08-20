@@ -1,70 +1,33 @@
 <footer class="docs-Footer" role="contentinfo">
-  <div class="docs-Main Container Container--slim t-gutter {{#is file.meta.layout "home"}}t-alignCenter{{/is}}">
+  <div class="Container Container--slim t-gutter {{#is file.meta.layout "home"}}t-alignCenter{{/is}}">
 
-    <h2 class="docs-subtitle">{{site.title}}</h2>
-    {{#is file.meta.layout "home"}}
-      {{> include/social-buttons}}
-    {{/is}}
+    <h2>Other projects</h2>
 
-    <ul class="ListInline t-mbXs">
-      <li itemprop="license">Code licensed under the MIT.</li>
-    </ul>
-
-    <ul class="ListInline">
-      <li><span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;Other Projects</li>
+    <ul class="ListInline t-mbTn">
       <li><a href="http://git.blivesta.com/crosscover/">Crosscover</a></li>
       <li>·</li>
-      <li><a href="http://git.blivesta.com/drawer/">Drawer</a></li>
+      <li><a href="http://git.blivesta.com/drawer" target="_black">Drawer</a></li>
       <li>·</li>
-      <li><a href="http://git.blivesta.com/chaffle" target="_black">Chaffle</a></li>
-      <li>·</li>
-      <li><a href="http://git.blivesta.com/conv" target="_black">Conv</a></li>
-      <li>·</li>
-      <li><a href="https://github.com/sircus">Sircus</a></li>
-      <li>·</li>
-      <li><a href="https://github.com/blivesta?tab=repositories" target="_blank">and more...</a></li>
+      <li><a href="http://github.com/sircus" target="_black">Sircus</a></li>
     </ul>
 
+    <p>
+      <small>
+      created by <span class="icon-blivesta icon-sm icon-circle"></span>&nbsp;
+      <a href="{{{ site.author_url }}}" target="_blank">{{ site.author }}</a> and <a href="{{ site.maintainer_url }}" target="_blank">{{ site.maintainer }}</a>.
+      </small>
+    </p>
+
   </div>
+
 </footer>
 
 <!-- Google analytics -->
-<script src="http://git.blivesta.com/js/ga.js"></script>
-
-<!-- jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.5.2/js/jquery.animsition.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-  {{#is file.meta.layout "overlay"}}
-  $(".animsition-overlay").animsition({
-    overlay: true
-  }).one('animsition.start',function(){
-    $('.animsition-overlay-wrapper').addClass('animsition-overlay-wrapper--start');
-  }).one('animsition.end',function(){
-  });
-  {{/is}}
-
-  {{#is file.meta.layout "home"}}
-  $(".animsition").animsition().one('animsition.start',function(){
-  }).one('animsition.end',function(){
-    $(this).find('.animsition-child').addClass('zoom-in').css({
-      "opacity":1
-    });
-  })
-  {{/is}}
-
-  {{#is file.meta.layout "base"}}
-  $(".animsition")
-    .animsition()
-    .one('animsition.start',function(){
-      console.log('animsition.start');
-    }).one('animsition.end',function(){
-      console.log('animsition.end');
-    })
-  {{/is}}
-
-});
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-50883754-1', 'blivesta.com');ga('require', 'displayfeatures');ga('send', 'pageview');
 </script>
+<!-- Twitter -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+</script>
+
+<script src="{{file.meta.base_url}}js/{{pkg.name}}.js"></script>

@@ -1,23 +1,20 @@
 {{> include/head}}
 <body class="{{file.meta.class}}" itemscope itemtype="http://schema.org/WebPage">
-<div class="animsition" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}">
+
+<div class="js-animsition animsition" data-animsition-in="{{file.meta.inAnimateClass}}" data-animsition-out="{{file.meta.outAnimateClass}}">
 
 {{> include/header}}
 
 <main role="main">
+{{> include/pagehead}}
   {{#block "main"}}
-  <section class="docs-Main Container Container--slim t-gutter">
-    <h2 class="docs-title">Demo</h2>
+  <section class="docs-Section Container Container--slim t-gutter">
+    <h2>Demo</h2>
     {{> include/demo-links}}
   </section>
 
-  <section class="docs-Main Container Container--slim t-gutter">
-    <h2 class="docs-title">Sandbox</h2>
-    {{> include/sandbox-link}}
-  </section>
-
-  <section class="docs-Main Container Container--slim t-gutter">
-    <h2 class="docs-title">Installation</h2>
+  <section class="docs-Section Container Container--slim t-gutter">
+    <h2>Installation</h2>
 {{> include/setup}}
   </section>
   {{/block}}

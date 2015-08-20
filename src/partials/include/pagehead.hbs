@@ -1,0 +1,32 @@
+{{#is file.meta.layout "home"}}
+
+
+<div class="docs-PageHead">
+  <div class="Container Container--slim t-gutter t-alignCenter">
+    <div class="animsition-child">
+      <h1 itemprop="name">{{site.title}}</h1>
+      <h2 itemprop="description">{{site.description}}</h2>
+      {{> include/social-buttons}}
+      <div class="docs-Carbon t-center t-clear t-mtMd">
+        {{> include/carbon}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{else}}
+
+
+  <div class="docs-PageHead">
+    <div class="Container Container--slim t-gutter">
+      <h1 class="t-mtMd" itemprop="name">{{file.meta.title}}</h1>
+      <h2>{{site.description}}</h2>
+      <div class="docs-Carbon t-clear">
+        {{> include/carbon}}
+      </div>
+    </div>
+  </div>
+
+
+{{/is}}

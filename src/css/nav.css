@@ -1,0 +1,27 @@
+.docs-Nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.docs-Nav li {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+
+.docs-Nav a {
+  line-height: 50px;
+  padding-right: 15px;
+  text-decoration: none;
+  color: #fff;
+  outline: 0;
+}
+
+
+.docs-Nav a:hover,
+.docs-Nav a:focus {
+  color: rgba(255, 255, 255, .5);
+}

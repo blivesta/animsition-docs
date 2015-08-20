@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  color: var(--docs-color-primary);
+}
+
+
+h1 a {
+  text-decoration: none;
+}
+
+
+hr {
+  display: block;
+  height: .1rem;
+  margin: 2.4rem 0;
+  padding: 0;
+  border: 0;
+  border-top: .1rem solid #ddd;
+}

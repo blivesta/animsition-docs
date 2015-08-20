@@ -1,20 +1,27 @@
 @import "sircus";
 @import "animsition/dist/css/animsition.css";
-@import "./header.css";
-@import "./main.css";
+@import "./base.css";
+@import "./nav.css";
+@import "./pagehead.css";
+@import "./animsition.css";
+@import "./label.css";
+@import "./section.css";
 @import "./footer.css";
 @import "./icon.css";
 @import "./button.css";
 @import "./highlight.css";
 @import "./sandbox.css";
+@import "./carbon.css";
 
 :root {
-  --docs-color: #556b7f;
-  --docs-labels-bgcolor: #cbd5df;
-  --docs-masthead-color: #fff;
-  --docs-masthead-bgcolor: #242d35;
-  --docs-masthead-gradient: #85a1bb;
-  --docs-footer-bgcolor: #ebeef2;
+  --g-fontFamily-sansEn: "Avenir Next", "Helvetica Neue", sans-serif;
+
+  --docs-color-primary: #607D8B;
+  --docs-color-primary-lighter: #ECEFF1;
+  --docs-color-primary-light: #B0BEC5;
+  --docs-color-primary-dark: #455A64;
+  --docs-color-primary-darker: #263238;
+
 
   --Button-transition: all 200ms ease-out;
   --Button--pill: 5rem;

@@ -1,0 +1,10 @@
+.docs-Label {
+  display: inline-block;
+  margin-bottom: .75rem;
+  padding: .3em 1rem;
+  vertical-align: baseline;
+  white-space: nowrap;
+  color: var(--docs-color-primary);
+  border-radius: 2px;
+  background-color: var(--docs-color-primary-lighter);
+}
