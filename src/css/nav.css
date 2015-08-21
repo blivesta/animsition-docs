@@ -1,17 +1,3 @@
-.docs-Nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-
-.docs-Nav li {
-  position: relative;
-  display: block;
-  float: left;
-}
-
-
 .docs-Nav a {
   line-height: 50px;
   padding-right: 15px;
@@ -24,4 +10,14 @@
 .docs-Nav a:hover,
 .docs-Nav a:focus {
   color: rgba(255, 255, 255, .5);
+}
+
+
+.docs-Nav-brand {
+  text-transform: uppercase;
+}
+
+
+.docs-Nav li {
+  text-align: right;
 }
