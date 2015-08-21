@@ -29,7 +29,6 @@
 
 
 <h4 class="t-mtLg">If you want each "linkElement" to use a different animation. </h4>
-
 {{#markdown}}
 ``` html
 {{#is file.meta.layout "overlay"}}
@@ -38,7 +37,8 @@
   class="animsition-link"
   data-animsition-out="overlay-slide-out-top"
   data-animsition-out-duration="2000"
->animsition link 1
+>
+  animsition link 1
 </a>
 
 <a
@@ -50,7 +50,12 @@
   animsition link 2
 </a>
 {{else}}
-<a href="./page1" class="animsition-link" data-animsition-out="fade-out-right" data-animsition-out-duration="2000">
+<a
+  href="./page1"
+  class="animsition-link"
+  data-animsition-out="fade-out-right"
+  data-animsition-out-duration="2000"
+>
   animsition link 1
 </a>
 
@@ -94,6 +99,7 @@
 {{/is}}
 ```
 {{/markdown}}
+
 
 <h3>Step 3: Call the animsition</h3>
 {{#markdown}}
