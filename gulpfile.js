@@ -194,6 +194,16 @@ gulp.task('ghpages', function() {
     }));
 });
 
+gulp.task('ghpages-staging', function() {
+  return gulp
+    .src('./gh-pages/**/*')
+    .pipe(ghpages({
+      remoteUrl: 'git@github.com:blivesta/staging.git',
+      branch: 'gh-pages'
+    }));
+});
+
+
 // ----------------------------------------------------------------
 
 gulp.task('minify', ['cssmin', 'jsmin', 'htmlmin']);
@@ -222,6 +232,17 @@ gulp.task('deploy', ['build'], function(cb) {
   runSequence(
     ['minify'],
     'ghpages', ['pagespeed'],
+    cb
+  );
+});
+
+// ----------------------------------------------------------------
+
+gulp.task('staging', ['build'], function(cb) {
+  runSequence(
+    ['minify'],
+    'ghpages-staging',
+    ['pagespeed'],
     cb
   );
 });
