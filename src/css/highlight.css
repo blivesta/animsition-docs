@@ -11,7 +11,7 @@ pre {
   word-wrap: break-word;
   margin-bottom:var(--g-space-xl);
 }
-pre code[class*="lang-"] {
+pre code[class*="language-"] {
   white-space: pre-wrap;
 }
 
