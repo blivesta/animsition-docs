@@ -1,4 +1,4 @@
-.docs-Footer {
+/*.docs-Footer {
   padding-top:var(--g-space-lg);
   padding-bottom:var(--g-space-lg);
   background-color: var(--docs-color-primary-lighter);
@@ -7,4 +7,27 @@
 .docs-Footer li {
   text-transform: uppercase;
   font-size: var(--g-fontSize-sm);
+}*/
+
+
+.docs-Footer {
+  margin-top:var(--g-space-gt);
+  padding-top:var(--g-space-xl);
+  padding-bottom:var(--g-space-xl);
+  /*background-color: var(--g-gray-5);*/
+  background-color: var(--docs-color-primary-lighter);
+}
+
+.docs-Footer * {
+  text-transform: uppercase;
+  /*color: #000;*/
+}
+
+.docs-Footer h4 {
+  color: var(--docs-color-primary);
+}
+
+.docs-Footer p,
+.docs-Footer li {
+  font-size: var(--g-fontSize-xs);
 }
