@@ -26,6 +26,7 @@ var source = require('vinyl-source-stream');
 var stylish = require('jshint-stylish');
 var uglify = require('gulp-uglify');
 
+var csso = require('gulp-csso');
 var cssnext = require('gulp-cssnext');
 var header = require('gulp-header');
 
@@ -140,11 +141,8 @@ gulp.task('css', function() {
 
 gulp.task('cssmin', function() {
   return gulp
-    .src('./src/css/' + pkg.name + '.css')
-    .pipe(cssnext({
-      browsers: ['last 2 versions'],
-      compress: true
-    }))
+    .src('./gh-pages/css/' + pkg.name + '.css')
+    .pipe(csso())
     .pipe(gulp.dest('./gh-pages/css'));
 });
 
@@ -221,7 +219,8 @@ gulp.task('default', ['build'], function(cb) {
 
 gulp.task('build', ['cleanup'], function(cb) {
   runSequence(
-    'js', 'css', 'html', ['sitemap', 'jshint', 'htmlhint'],
+    'js', 'css', 'html',
+    ['sitemap', 'jshint', 'htmlhint'],
     cb
   );
 });
