@@ -1,5 +1,6 @@
 title: Animsition
 pkg_name: animsition
+repo_url: https://github.com/blivesta/animsition
 url: http://git.blivesta.com/animsition/
 description: A simple and easy jQuery plugin for CSS animated page transitions.
 tag: jquery, css3, animsition, transition
