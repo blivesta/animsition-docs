@@ -6,7 +6,7 @@
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- animsition.js -->
-<script src="{{file.meta.base_url}}dist/js/jquery.animsition.min.js"></script>
+<script src="{{file.meta.base_url}}dist/js/animsition.min.js"></script>
 ```
 {{/markdown}}
 
@@ -35,7 +35,7 @@
 <a
   href="./page1"
   class="animsition-link"
-  data-animsition-out="overlay-slide-out-top"
+  data-animsition-out-class="overlay-slide-out-top"
   data-animsition-out-duration="2000"
 >
   animsition link 1
@@ -44,7 +44,7 @@
 <a
   href="./page2"
   class="animsition-link"
-  data-animsition-out="overlay-slide-out-right"
+  data-animsition-out-class="overlay-slide-out-right"
   data-animsition-out-duration="500"
 >
   animsition link 2
@@ -53,7 +53,7 @@
 <a
   href="./page1"
   class="animsition-link"
-  data-animsition-out="fade-out-right"
+  data-animsition-out-class="fade-out-right"
   data-animsition-out-duration="2000"
 >
   animsition link 1
@@ -62,7 +62,7 @@
 <a
   href="./page2"
   class="animsition-link"
-  data-animsition-out="rotate-out"
+  data-animsition-out-class="rotate-out"
   data-animsition-out-duration="500"
 >
   animsition link 2
@@ -79,9 +79,9 @@
 <div
   class="animsition-overlay"
   data-animsition-overlay="true"
-  data-animsition-in="{{file.meta.inAnimateClass}}"
+  data-animsition-in-class="{{file.meta.inAnimateClass}}"
   data-animsition-in-duration="1000"
-  data-animsition-out="{{file.meta.outAnimateClass}}"
+  data-animsition-out-class="{{file.meta.outAnimateClass}}"
   data-animsition-out-duration="800"
 >
   ...
@@ -89,9 +89,9 @@
 {{else}}
 <div
   class="animsition"
-  data-animsition-in="{{file.meta.inAnimateClass}}"
+  data-animsition-in-class="{{file.meta.inAnimateClass}}"
   data-animsition-in-duration="1000"
-  data-animsition-out="{{file.meta.outAnimateClass}}"
+  data-animsition-out-class="{{file.meta.outAnimateClass}}"
   data-animsition-out-duration="800"
 >
   ...
@@ -119,21 +119,24 @@ $(document).ready(function() {
     loading: true,
     loadingParentElement: 'body', //animsition wrapper element
     loadingClass: 'animsition-loading',
-    unSupportCss: [
-      'animation-duration',
-      '-webkit-animation-duration',
-      '-o-animation-duration'
-    ],
-    //"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-    //The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+    loadingInner: '', // e.g '<img src="loading.svg" />'
+    timeout: false,
+    timeoutCountdown: 5000,
+    onLoadEvent: true,
+    browser: [ 'animation-duration', '-webkit-animation-duration'],
+    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
     {{#is file.meta.layout "overlay"}}
     overlay : true,
     {{else}}
     overlay : false,
     {{/is}}
     overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body'
+    overlayParentElement : 'body',
+    transition: function(url){ window.location.href = url; }
   });
 });
 ```
 {{/markdown}}
+
+    <p><a class="Button Button--primary" href="https://github.com/blivesta/animsition/tree/master/sandbox" target="_blank">Example</a></p>

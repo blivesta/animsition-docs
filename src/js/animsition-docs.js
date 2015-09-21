@@ -1,6 +1,6 @@
 var $ = require('jquery');
-jQuery = $;
-var animsition = require('animsition');
+// jQuery = $;
+var animsition = require('./~animsition-v4');
 
 var $animsition = $('.animsition');
 var $base = $('.js-animsition');
@@ -10,27 +10,23 @@ var $overlay = $('.js-animsition-overlay');
 
 if($animsition.hasClass('js-animsition-home')){
 
-   $home
-    .animsition()
-    .one('animsition.start',function(){})
-    .one('animsition.end',function(){
-      $(this)
-        .find('.animsition-child')
-        .addClass('zoom-in')
-        .css({
-          'opacity':1
-        });
-  });
+   $home.animsition()
 
 } else if($animsition.hasClass('js-animsition')){
 
   $base
   .animsition()
-  .one('animsition.start',function(){
-    console.log('animsition.start');
+  .one('animsition.inStart',function(){
+    console.log('animsition.inStart');
   })
-  .one('animsition.end',function(){
-    console.log('animsition.end');
+  .one('animsition.inEnd',function(){
+    console.log('animsition.inEnd');
+  })
+  .one('animsition.outStart',function(){
+    console.log('animsition.outStart');
+  })
+  .one('animsition.outEnd',function(){
+    console.log('animsition.outEnd');
   });
 
 } else {
@@ -39,10 +35,10 @@ if($animsition.hasClass('js-animsition-home')){
   .animsition({
     overlay: true
   })
-  .one('animsition.start',function(){
+  .one('animsition.inStart',function(){
     $('.animsition-overlay-wrapper')
-      .addClass('animsition-overlay-wrapper--start');
+      .removeClass('is-init');
   })
-  .one('animsition.end',function(){});
+  .one('animsition.inEnd',function(){});
 
 }
