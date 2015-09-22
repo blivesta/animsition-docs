@@ -1,6 +1,6 @@
 var $ = require('jquery');
 // jQuery = $;
-var animsition = require('./~animsition-v4');
+var animsition = require('animsition');
 
 var $animsition = $('.animsition');
 var $base = $('.js-animsition');

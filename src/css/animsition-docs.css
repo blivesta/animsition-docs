@@ -1,6 +1,6 @@
 @import "sircus";
-/*@import "animsition/dist/css/animsition.css";*/
-@import "./~animsition-v4.css";
+@import "animsition/dist/css/animsition.css";
+/*@import "./~animsition-v4.css";*/
 @import "./base.css";
 @import "./navbar.css";
 @import "./nav.css";
