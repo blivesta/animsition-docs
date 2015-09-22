@@ -1,4 +1,9 @@
 <h3>Step 1: Link required files</h3>
+
+{{#is file.meta.layout "home"}}
+<div class="t-sm-width7of8 t-center">
+{{/is}}
+
 {{#markdown}}
 ``` html
 <!-- animsition.css -->
@@ -10,8 +15,18 @@
 ```
 {{/markdown}}
 
+{{#is file.meta.layout "home"}}
+</div>
+{{/is}}
+
+
+
 
 <h3>Step 2: HTML markup</h3>
+{{#is file.meta.layout "home"}}
+<div class="t-sm-width2of3 t-center">
+{{/is}}
+
 {{#markdown}}
 ``` html
 <body>
@@ -27,8 +42,17 @@
 ```
 {{/markdown}}
 
+{{#is file.meta.layout "home"}}
+</div>
+{{/is}}
+
+
+
 
 <h4 class="t-mtLg">If you want each "linkElement" to use a different animation. </h4>
+{{#is file.meta.layout "home"}}
+<div class="t-sm-widthHalf t-center">
+{{/is}}
 {{#markdown}}
 ``` html
 {{#is file.meta.layout "overlay"}}
@@ -70,9 +94,15 @@
 {{/is}}
 ```
 {{/markdown}}
+{{#is file.meta.layout "home"}}
+</div>
+{{/is}}
 
 
 <h4 class="t-mtLg">If you want to each page to use a different animation.</h4>
+{{#is file.meta.layout "home"}}
+<div class="t-sm-widthHalf t-center">
+{{/is}}
 {{#markdown}}
 ``` html
 {{#is file.meta.layout "overlay"}}
@@ -99,9 +129,15 @@
 {{/is}}
 ```
 {{/markdown}}
+{{#is file.meta.layout "home"}}
+</div>
+{{/is}}
 
 
 <h3>Step 3: Call the animsition</h3>
+{{#is file.meta.layout "home"}}
+<div class="t-sm-width3of4 t-center">
+{{/is}}
 {{#markdown}}
 ``` js
 $(document).ready(function() {
@@ -138,5 +174,8 @@ $(document).ready(function() {
 });
 ```
 {{/markdown}}
+{{#is file.meta.layout "home"}}
+</div>
+{{/is}}
 
-    <p><a class="Button Button--primary" href="https://github.com/blivesta/animsition/tree/master/sandbox" target="_blank">Example</a></p>
+<p><a class="Button Button--primary" href="https://github.com/blivesta/animsition/tree/master/sandbox" target="_blank">Example</a></p>
