@@ -10,12 +10,16 @@ var $overlay = $('.js-animsition-overlay');
 
 if($animsition.hasClass('js-animsition-home')){
 
-   $home.animsition()
+   $home.animsition({
+     timeout:true
+   })
 
 } else if($animsition.hasClass('js-animsition')){
 
   $base
-  .animsition()
+  .animsition({
+    timeout:true
+  })
   .one('animsition.inStart',function(){
     console.log('animsition.inStart');
   })
@@ -33,6 +37,7 @@ if($animsition.hasClass('js-animsition-home')){
 
   $overlay
   .animsition({
+    timeout:true,
     overlay: true
   })
   .one('animsition.inStart',function(){
