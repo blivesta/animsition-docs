@@ -1,16 +1,5 @@
 'use strict';
 
-var banner = [
-  '/*!',
-  ' * <%= pkg.name %> - <%= pkg.description %>',
-  ' * Version <%= pkg.version %>',
-  ' * <%= pkg.homepage %>',
-  ' * Author : <%= pkg.author %>',
-  ' * License : <%= pkg.license %>',
-  ' */',
-  ''
-].join('\n');
-
 var del = require('del');
 var fs = require('fs');
 var ghpages = require('gulp-gh-pages');
@@ -39,6 +28,17 @@ var hb = require('gulp-hb');
 var htmlmin = require('gulp-htmlmin');
 var htmlhint = require("gulp-htmlhint");
 var yaml = require('js-yaml');
+
+var banner = [
+  '/*!',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * Version <%= pkg.version %>',
+  ' * <%= pkg.homepage %>',
+  ' * Author : <%= pkg.author %>',
+  ' * License : <%= pkg.license %>',
+  ' */',
+  ''
+].join('\n');
 
 // ----------------------------------------------------------------
 
@@ -230,7 +230,8 @@ gulp.task('build', ['cleanup'], function(cb) {
 gulp.task('deploy', ['build'], function(cb) {
   runSequence(
     ['minify'],
-    'ghpages', ['pagespeed'],
+    'ghpages',
+    ['pagespeed'],
     cb
   );
 });
