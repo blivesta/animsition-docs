@@ -19,29 +19,5 @@ $('.foo').animsition('out', $elem, url);
 {{/markdown}}
   </div>
 
-  <div class="Grid-col t-sm-width2of3">
-    <h3 class="t-alignCenter">example</h3>
-{{#markdown}}
-``` javascript
-var $animsition = $('.animsition');
-
-$(document).ready(function() {
-  $animsition.animsition({
-    onLoadEvent: false
-  })
-  .each(function(i){
-    $(this).animsition('in');
-  });
-});
-
-$(document).on('click', '.foo', function(event){
-  event.preventDefault();
-  $animsition.animsition('out', $(this), $(this).attr('href'));
-});
-```
-{{/markdown}}
-  </div>
-
-
 
 </div>

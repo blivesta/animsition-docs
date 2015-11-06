@@ -1,5 +1,4 @@
 var $ = require('jquery');
-// jQuery = $;
 var animsition = require('animsition');
 
 var $animsition = $('.animsition');
