@@ -1,7 +1,7 @@
 {
   "name": "animsition-docs",
-  "description": "Animsition website.",
-  "author": "Yasuyuki Enomoto <enmt@blivesta.com> (http://blivesta.com/)",
+  "description": "Documentation for Animsition.",
+  "author": "blivesta <design@blivesta.com> (http://blivesta.com/)",
   "homepage": "http://git.blivesta.com/animsition",
   "license": "MIT",
   "repository": {
