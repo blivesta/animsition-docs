@@ -220,7 +220,7 @@ gulp.task('default', ['build'], function(cb) {
 gulp.task('build', ['cleanup'], function(cb) {
   runSequence(
     'js', 'css', 'html',
-    ['sitemap', 'jshint', 'htmlhint'],
+    ['jshint', 'htmlhint'],
     cb
   );
 });
@@ -229,7 +229,7 @@ gulp.task('build', ['cleanup'], function(cb) {
 
 gulp.task('deploy', ['build'], function(cb) {
   runSequence(
-    ['minify'],
+    ['minify','sitemap'],
     'ghpages',
     ['pagespeed'],
     cb
